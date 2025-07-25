@@ -1,0 +1,65 @@
+{
+  "name": "vue-awesome-swiper",
+  "description": "Swiper component for Vue",
+  "version": "4.2.0",
+  "keywords": [
+    "vue swiper",
+    "vue awesome swiper",
+    "vue carrousel",
+    "carrousel",
+    "swiper"
+  ],
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/surmon-china/vue-awesome-swiper"
+  },
+  "bugs": "https://github.com/surmon-china/vue-awesome-swiper/issues",
+  "homepage": "https://github.surmon.me/vue-awesome-swiper",
+  "author": {
+    "name": "Surmon",
+    "url": "https://github.com/surmon-china"
+  },
+  "main": "dist/vue-awesome-swiper.js",
+  "module": "dist/vue-awesome-swiper.esm.js",
+  "browser": "dist/vue-awesome-swiper.js",
+  "jsdelivr": "dist/vue-awesome-swiper.js",
+  "unpkg": "dist/vue-awesome-swiper.js",
+  "jspm": {
+    "main": "dist/vue-awesome-swiper.esm.js",
+    "registry": "npm",
+    "format": "esm"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "cleanup": "rm -rf ./dist/*",
+    "build": "npm run cleanup && cross-env NODE_ENV=production rollup -c",
+    "lint": "echo 'Skipping lint'",
+    "test": "echo 'Skipping test'",
+    "test:watch": "echo 'Skipping test:watch'",
+    "rebirth": "npm run build",
+    "release": ". ./scripts/release.sh"
+  },
+  "peerDependencies": {
+    "vue": "2.x"
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "rollup": "^2.0.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "typescript": "^3.7.5",
+    "vue": "^2.6.10"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "swiper": "^6.8.4"
+  }
+}
