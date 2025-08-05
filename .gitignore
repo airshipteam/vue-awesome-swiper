@@ -6,8 +6,9 @@ selenium-debug.log
 npm-debug.log*
 
 # output
+# Uncommented to include dist files
 dist
-dist/*
+# dist/*
 
 # System
 .DS_Store

@@ -15,8 +15,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "vue",
-      "jest"
+      "vue"
     ],
     "lib": [
       "esnext",
