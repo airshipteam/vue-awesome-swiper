@@ -14,8 +14,9 @@ export const handleClickSlideEvent = (swiper: Swiper | null, event: MouseEvent, 
     if (event?.target && eventPath) {
       const slides = Array.from(swiper.slides)
       const paths = Array.from(eventPath)
+      const target = event.target as Element
       // Click slide || slide[children]
-      if (slides.includes(event.target) || paths.some(item => slides.includes(item))) {
+      if (slides.includes(target) || paths.some(item => slides.includes(item as Element))) {
         const clickedIndex = swiper.clickedIndex
         const reallyIndex = Number(swiper.clickedSlide?.dataset?.swiperSlideIndex)
         const reallyIndexValue = Number.isInteger(reallyIndex) ? reallyIndex : null
@@ -28,7 +29,7 @@ export const handleClickSlideEvent = (swiper: Swiper | null, event: MouseEvent, 
 
 export const bindSwiperEvents = (swiper: Swiper, emit: any): void => {
   SWIPER_EVENTS.forEach(eventName => {
-    swiper.on(eventName, (...args: any[]) => {
+    (swiper as any).on(eventName, (...args: any[]) => {
       emit(eventName, ...args)
       const kebabcaseName = kebabcase(eventName)
       if (kebabcaseName !== eventName) {

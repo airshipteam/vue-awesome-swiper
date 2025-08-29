@@ -4,8 +4,6 @@
  * @author Surmon <https://github.com/surmon-china>
  */
 
-import { CommonEvent } from 'swiper'
-
 export enum CoreNames {
   SwiperComponent = 'Swiper',
   SwiperSlideComponent = 'SwiperSlide',
@@ -33,7 +31,7 @@ export enum ComponentPropNames {
 }
 
 // https://swiperjs.com/api/#events
-export const SWIPER_EVENTS: CommonEvent[] = [
+export const SWIPER_EVENTS: string[] = [
   'init',
   'beforeDestroy',
   'slideChange',
@@ -61,7 +59,7 @@ export const SWIPER_EVENTS: CommonEvent[] = [
   'setTranslate',
   'setTransition',
   'resize',
-  'observerUpdate' as CommonEvent,
-  'beforeLoopFix' as CommonEvent,
-  'loopFix' as CommonEvent
+  'observerUpdate',
+  'beforeLoopFix',
+  'loopFix'
 ]
